@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary Blue Shades */
+  --color-primary: #007bff;
+  --color-primary-light: #66b2ff;
+  --color-primary-dark: #0056b3;
+
+  /* Secondary Gray Shades */
+  --color-secondary: #6c757d;
+  --color-secondary-light: #adb5bd;
+  --color-secondary-dark: #495057;
+
+  /* Background Colors */
+  --color-background: #ffffff;
+  --color-background-light: #f8f9fa;
+
+  /* Send Button Color */
+  --color-send-icon: #f44144;
+
+  /* Accent Colors */
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-error: #dc3545;
+}
+
+body {
+  background-color: #adb5bd;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  box-shadow: inset 0 0 0 12px rgba(0, 0, 0, 0.37);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  box-shadow: inset 0 0 0 12px rgba(0, 0, 0, 0.54);
+  border-radius: 12px;
+}
