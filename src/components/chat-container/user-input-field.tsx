@@ -1,5 +1,5 @@
 import { Paperclip, SendHorizontal, XIcon } from "lucide-react";
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useConversationStore } from "../../store/chat-container-store";
 import { useMutation } from "@tanstack/react-query";
 import { queryChatbotAgent } from "../../services/chatbot-service";
