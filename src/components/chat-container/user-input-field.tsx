@@ -53,6 +53,7 @@ const UserInputField = () => {
         role: "user",
         content: userMessage,
         timestamp: currentTime,
+        attachment: imageFile,
       };
       const chatbotThinkingPlaceholder = {
         role: "loader",
@@ -71,6 +72,7 @@ const UserInputField = () => {
       }
 
       invokeChatbotAgent(formData);
+      setImageFile(null);
     }
   };
 
@@ -99,7 +101,7 @@ const UserInputField = () => {
     const file = e.target.files?.[0];
     if (file) {
       setImageFile(file);
-      setImagePreview(URL.createObjectURL(file)); // Create preview URL
+      setImagePreview(URL.createObjectURL(file));
     }
 
     textareaRef.current?.focus();
@@ -132,7 +134,7 @@ const UserInputField = () => {
       <textarea
         ref={textareaRef}
         onInput={resizeTextarea}
-        className="w-full h-6 max-h-32 px-2 resize-none font-medium my-4"
+        className="w-full h-6 max-h-32 px-2 resize-none font-medium mb-4"
         placeholder="Start Asking"
         onKeyDown={(event) => {
           onKeyStroke(event);
