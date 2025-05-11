@@ -1,5 +1,5 @@
 import { Paperclip, SendHorizontal, XIcon } from "lucide-react";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useConversationStore } from "../../store/chat-container-store";
 import { useMutation } from "@tanstack/react-query";
 import { queryChatbotAgent } from "../../services/chatbot-service";
@@ -113,9 +113,9 @@ const UserInputField = () => {
   };
 
   return (
-    <div className="bg-background w-full min-w-100 max-w-200 rounded-3xl border-2 border-[#FFFFFF0F] p-4">
+    <div className="bg-background w-full max-w-200 rounded-3xl border-2 border-[#FFFFFF0F] p-4">
       {imagePreview && (
-        <div className="relative w-20 h-20 mt-2">
+        <div className="relative w-20 h-20 mt-2 mb-2">
           <div className="h-full p-1">
             <img
               src={imagePreview}
@@ -134,7 +134,7 @@ const UserInputField = () => {
       <textarea
         ref={textareaRef}
         onInput={resizeTextarea}
-        className="w-full h-6 max-h-32 px-2 resize-none font-medium mb-4"
+        className="w-full h-6 max-h-32 px-2 resize-none mb-4"
         placeholder="Start Asking"
         onKeyDown={(event) => {
           onKeyStroke(event);

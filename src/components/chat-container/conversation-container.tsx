@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useConversationStore } from "../../store/chat-container-store";
-import ReactMarkdown from "react-markdown";
+import MarkdownParser from "../../helpers/markdown-parser";
 
 const Conversations = () => {
   const conversations = useConversationStore(
@@ -72,7 +72,10 @@ const Conversations = () => {
               return (
                 <div className="flex w-full mb-4 pl-8 gap-2" key={index}>
                   <div className="flex flex-col rounded-2xl p-4 bg-background-light max-w-[70%] border-1 border-gray-400">
-                    <ReactMarkdown>{content}</ReactMarkdown>
+                    {content && (
+                      <MarkdownParser markdown={content}></MarkdownParser>
+                    )}
+
                     <div className="flex justify-end text-xs mt-2">
                       {timestamp}
                     </div>
