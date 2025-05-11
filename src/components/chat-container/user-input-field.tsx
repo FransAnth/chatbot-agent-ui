@@ -105,6 +105,7 @@ const UserInputField = () => {
     }
 
     textareaRef.current?.focus();
+    e.target.value = "";
   };
 
   const removeImage = () => {
