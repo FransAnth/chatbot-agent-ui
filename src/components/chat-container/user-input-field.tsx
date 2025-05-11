@@ -1,10 +1,4 @@
-import {
-  ImageUpIcon,
-  Paperclip,
-  SendHorizontal,
-  XCircleIcon,
-  XIcon,
-} from "lucide-react";
+import { Paperclip, SendHorizontal, XIcon } from "lucide-react";
 import { useRef, useState } from "react";
 import { useConversationStore } from "../../store/chat-container-store";
 import { useMutation } from "@tanstack/react-query";
@@ -107,6 +101,8 @@ const UserInputField = () => {
       setImageFile(file);
       setImagePreview(URL.createObjectURL(file)); // Create preview URL
     }
+
+    textareaRef.current?.focus();
   };
 
   const removeImage = () => {
@@ -115,7 +111,7 @@ const UserInputField = () => {
   };
 
   return (
-    <div className="bg-background w-[100%] min-w-100 max-w-200 rounded-3xl border-2 border-[#FFFFFF0F] p-4">
+    <div className="bg-background w-full min-w-100 max-w-200 rounded-3xl border-2 border-[#FFFFFF0F] p-4">
       {imagePreview && (
         <div className="relative w-20 h-20 mt-2">
           <div className="h-full p-1">
