@@ -25,7 +25,7 @@
 }
 
 body {
-  background-color: #adb5bd;
+  background-color: #d9e1e9;
 }
 
 input::-webkit-outer-spin-button,
@@ -68,7 +68,7 @@ button:hover {
 
 /* global.css or component-specific */
 .markdown-content a {
-  color: blue;
+  color: #007bff;
   text-decoration: underline;
 }
 

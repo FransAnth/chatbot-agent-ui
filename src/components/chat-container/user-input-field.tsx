@@ -114,7 +114,7 @@ const UserInputField = () => {
   };
 
   return (
-    <div className="bg-background w-full max-w-200 rounded-3xl border-2 border-[#FFFFFF0F] p-4">
+    <div className="bg-background w-full max-w-200 rounded-3xl border-1 border-gray-400 p-4">
       {imagePreview && (
         <div className="relative w-20 h-20 mt-2 mb-2">
           <div className="h-full p-1">

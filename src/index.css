@@ -2,7 +2,7 @@
 #chatLoader {
   width: 50px;
   aspect-ratio: 4;
-  background: radial-gradient(circle closest-side, #50727b 90%, #0000) 0 /
+  background: radial-gradient(circle closest-side, #6c757d 90%, #0000) 0 /
     calc(100% / 3) 100% space;
   clip-path: inset(0 100% 0 0);
   animation: l1 1s steps(4) infinite;
