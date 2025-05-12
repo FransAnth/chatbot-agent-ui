@@ -1,8 +1,8 @@
 import { Paperclip, SendHorizontal, XIcon } from "lucide-react";
 import { useRef, useState } from "react";
-import { useConversationStore } from "../../store/chat-container-store";
+import { useConversationStore } from "../store/chat-container-store";
 import { useMutation } from "@tanstack/react-query";
-import { queryChatbotAgent } from "../../services/chatbot-service";
+import { queryChatbotAgent } from "../services/chatbot-service";
 
 const UserInputField = () => {
   const [imageFile, setImageFile] = useState<File | null>(null);

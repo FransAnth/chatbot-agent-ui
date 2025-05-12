@@ -1,5 +1,5 @@
 import "./App.css";
-import ChatContainer from "./components/chat-container/chat-container";
+import ChatContainer from "./pages/ChatContainer";
 
 function App() {
   return (

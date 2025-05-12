@@ -1,6 +1,6 @@
-import { useConversationStore } from "../../store/chat-container-store";
-import Conversations from "./conversation-container";
-import UserInputField from "./user-input-field";
+import { useConversationStore } from "../store/chat-container-store";
+import Conversations from "../components/conversation-container";
+import UserInputField from "../components/user-input-field";
 
 const ChatContainer = () => {
   const conversations = useConversationStore(

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { useConversationStore } from "../../store/chat-container-store";
-import MarkdownParser from "../../helpers/markdown-parser";
+import { useConversationStore } from "../store/chat-container-store";
+import MarkdownParser from "../helpers/markdown-parser";
 
 const Conversations = () => {
   const conversations = useConversationStore(
